@@ -15,7 +15,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-18.04
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
@@ -26,7 +26,7 @@ jobs:
     - name: Update && install packages
       run: |
         sudo apt-get update
-        sudo apt-get install -y libncurses5 libncurses5-dev m4 bison gawk flex libstdc++6-4.7-dev g++-4.7 g++ \
+        sudo apt-get install -y libncurses5 libncurses5-dev m4 bison gawk flex libc++-8-dev clang \
         gengetopt git gitk zlib1g-dev autoconf autopoint libtool-bin shtool autogen \
         mtd-utils intltool sharutils docbook-xsl-* libstdc++5 texinfo dos2unix xsltproc \
         u-boot-tools device-tree-compiler qemu gperf liblzo2-dev uuid-dev build-essential \
